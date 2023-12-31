@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.pendapatan.PendapatanFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pendapatanMingguan"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:background="@drawable/box_pendapatan"
+            android:backgroundTint="@color/gray"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:padding="@dimen/_6sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/pendapatan_box2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pendapatanBulanan"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:background="@drawable/box_pendapatan"
+            android:backgroundTint="@color/yellow"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:padding="@dimen/_6sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/pendapatan_box3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pendapatanTahunan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:background="@drawable/box_pendapatan"
+        android:backgroundTint="@color/red"
+        android:padding="@dimen/_6sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/pendapatan_box4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

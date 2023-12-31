@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:autoTransition="animateToEnd">
+        <KeyFrameSet>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/backgroundLayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_170sdp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="10"
+            android:scaleY="10"
+            motion:transitionEasing="cubic(0.55,0.14,0.26,0.84)" />
+        <Constraint
+            android:id="@+id/yellowLogo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:alpha="0"
+            motion:transitionEasing="cubic(0.77,0.01,0.59,0.34)" />
+        <Constraint
+            android:id="@+id/redLogo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="1"
+            android:scaleY="1"
+            motion:transitionEasing="cubic(0.84,0.05,0.58,0.79)" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/backgroundLayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_170sdp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="0"
+            android:scaleY="0"
+            motion:transitionEasing="cubic(1,0,1,0)" />
+        <Constraint
+            android:id="@+id/yellowLogo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:alpha="1"
+            motion:transitionEasing="cubic(1,0.01,0.76,0.11)" />
+        <Constraint
+            android:id="@+id/redLogo"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="0"
+            android:scaleY="0"
+            motion:transitionEasing="cubic(0.2,0.18,0.8,0.8)" />
+    </ConstraintSet>
+</MotionScene>

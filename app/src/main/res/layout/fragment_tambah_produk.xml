@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.produk.TambahProdukFragment">
+
+    <LinearLayout
+        android:id="@+id/namaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:background="@drawable/input_backgound"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/inputNamaMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/no_underline_edittext"
+            android:hint="Nama Menu"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hargaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:background="@drawable/input_backgound"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/namaLayout"
+        app:layout_constraintStart_toStartOf="@+id/namaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/namaLayout">
+
+        <EditText
+            android:id="@+id/inputHargaMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/no_underline_edittext"
+            android:hint="Harga Menu"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/kategoriLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:background="@drawable/input_backgound"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/hargaLayout"
+        app:layout_constraintStart_toStartOf="@+id/hargaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/hargaLayout">
+
+        <EditText
+            android:id="@+id/inputKategoriMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/no_underline_edittext"
+            android:hint="Kategori Menu"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/simpanData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="@+id/kategoriLayout"
+        app:layout_constraintStart_toStartOf="@+id/kategoriLayout"
+        app:layout_constraintTop_toBottomOf="@+id/kategoriLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

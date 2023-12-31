@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.shuryasnack.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_produk"
+        android:name="com.example.shuryasnack.ui.produk.ProdukFragment"
+        android:label="@string/menu_product"
+        tools:layout="@layout/fragment_produk" >
+        <action
+            android:id="@+id/action_nav_produk_to_tambah_produk"
+            app:destination="@id/tambah_produk" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambah_produk"
+        android:name="com.example.shuryasnack.ui.produk.TambahProdukFragment"
+        android:label="@string/toolbar_tambah_produk"
+        tools:layout="@layout/fragment_tambah_produk" />
+
+    <fragment
+        android:id="@+id/nav_riwayat"
+        android:name="com.example.shuryasnack.ui.riwayat.RiwayatFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_riwayat" />
+
+    <fragment
+        android:id="@+id/nav_pendapatan"
+        android:name="com.example.shuryasnack.ui.pendapatan.PendapatanFragment"
+        android:label="@string/menu_pendapatan"
+        tools:layout="@layout/fragment_pendapatan" >
+        <action
+            android:id="@+id/action_nav_pendapatan_to_pendapatan_mingguan"
+            app:destination="@id/pendapatan_mingguan" />
+        <action
+            android:id="@+id/action_nav_pendapatan_to_pendapatan_bulanan"
+            app:destination="@id/pendapatan_bulanan" />
+        <action
+            android:id="@+id/action_nav_pendapatan_to_pendapatan_tahunan"
+            app:destination="@id/pendapatan_tahunan" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendapatan_mingguan"
+        android:name="com.example.shuryasnack.ui.pendapatan.MingguanFragment"
+        android:label="@string/pendapatan_box2"
+        tools:layout="@layout/fragment_mingguan" />
+    <fragment
+        android:id="@+id/pendapatan_bulanan"
+        android:name="com.example.shuryasnack.ui.pendapatan.BulananFragment"
+        android:label="@string/pendapatan_box3"
+        tools:layout="@layout/fragment_bulanan" />
+    <fragment
+        android:id="@+id/pendapatan_tahunan"
+        android:name="com.example.shuryasnack.ui.pendapatan.TahunanFragment"
+        android:label="@string/pendapatan_box4"
+        tools:layout="@layout/fragment_tahunan" />
+</navigation>

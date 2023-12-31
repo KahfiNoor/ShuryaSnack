@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "207526516554",
+    "firebase_url": "https://shurya-snack-63bbb-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "shurya-snack-63bbb",
+    "storage_bucket": "shurya-snack-63bbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207526516554:android:866b2d9704fe7f325ed3b3",
+        "android_client_info": {
+          "package_name": "com.example.shuryasnack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207526516554-ksa1n2gjdv3ios70v4a6eb4gq47p3nec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxyLI-co-nftlMVVNyK_16k7Wno0IRgB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207526516554-ksa1n2gjdv3ios70v4a6eb4gq47p3nec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
