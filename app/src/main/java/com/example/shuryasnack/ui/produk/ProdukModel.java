@@ -2,13 +2,18 @@ package com.example.shuryasnack.ui.produk;
 
 public class ProdukModel {
 
-    private String nama, kategori;
+    private String nama, kategori, produkId;
     private int harga;
 
-    public ProdukModel(String getNama, int getHarga, String getKategori) {
-        this.nama = getNama;
-        this.harga = getHarga;
-        this.kategori = getKategori;
+    public ProdukModel() {
+        // Default constructor required for calls to DataSnapshot.getValue(ProdukModel.class)
+    }
+
+    public ProdukModel(String produkId, String nama, int harga, String kategori) {
+        this.produkId = produkId;
+        this.nama = nama;
+        this.harga = harga;
+        this.kategori = kategori;
     }
 
     public String getNama() {
@@ -34,4 +39,13 @@ public class ProdukModel {
     public void setHarga(int harga) {
         this.harga = harga;
     }
+
+    public String getProdukId() {
+        return produkId;
+    }
+
+    public void setProdukId(String produkId) {
+        this.produkId = produkId;
+    }
 }
+

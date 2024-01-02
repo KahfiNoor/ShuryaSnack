@@ -2,10 +2,12 @@ package com.example.shuryasnack.ui.produk;
 
 import static androidx.constraintlayout.widget.ConstraintLayoutStates.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.shuryasnack.R;
 import com.example.shuryasnack.databinding.FragmentTambahProdukBinding;
@@ -81,19 +84,22 @@ public class TambahProdukFragment extends Fragment {
 
             public void tambahProduk(String produkId, String nama, int harga, String kategori) {
                 try {
-                    ProdukModel menu = new ProdukModel(nama, harga, kategori);
+                    ProdukModel menu = new ProdukModel(produkId, nama, harga, kategori);
                     mDatabase.child("menus").child(produkId).setValue(menu)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Log.d(TAG, "Data berhasil ditambahkan");
+                                    Toast.makeText(requireContext(), "Produk berhasil ditambahkan", Toast.LENGTH_SHORT).show();
                                     // Tambahkan notifikasi atau aksi lain yang sesuai di sini
+                                    NavHostFragment.findNavController(TambahProdukFragment.this).navigate(R.id.action_tambah_produk_to_nav_produk);
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
                                     Log.e(TAG, "Gagal menambahkan data", e);
+                                    Toast.makeText(requireContext(), "Gagal menambahkan data", Toast.LENGTH_SHORT).show();
                                     // Tambahkan tindakan penanganan kesalahan yang sesuai di sini
                                 }
                             });

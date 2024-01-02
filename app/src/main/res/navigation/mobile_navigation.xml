@@ -24,7 +24,11 @@
         android:id="@+id/tambah_produk"
         android:name="com.example.shuryasnack.ui.produk.TambahProdukFragment"
         android:label="@string/toolbar_tambah_produk"
-        tools:layout="@layout/fragment_tambah_produk" />
+        tools:layout="@layout/fragment_tambah_produk" >
+        <action
+            android:id="@+id/action_tambah_produk_to_nav_produk"
+            app:destination="@id/nav_produk" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_riwayat"

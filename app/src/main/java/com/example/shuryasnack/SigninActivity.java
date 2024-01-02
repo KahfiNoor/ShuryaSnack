@@ -54,6 +54,7 @@ public class SigninActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
             // Memindahkan pengguna ke halaman dashboard
+            String uid = currentUser.getUid();
             Intent intent = new Intent(SigninActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
