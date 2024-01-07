@@ -4,16 +4,23 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.shuryasnack.ui.produk.ProdukModel;
+
+import java.util.ArrayList;
+
 public class HomeViewModel extends ViewModel {
+    private MutableLiveData<ArrayList<ProdukModel>> selectedMenuList = new MutableLiveData<>();
 
-    private final MutableLiveData<String> mText;
-
-    public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+    public void setSelectedMenuList(ArrayList<ProdukModel> menuList) {
+        selectedMenuList.setValue(menuList);
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<ArrayList<ProdukModel>> getSelectedMenuList() {
+        return selectedMenuList;
+    }
+
+    public void updateSelectedMenuList(ArrayList<ProdukModel> list) {
+        selectedMenuList.postValue(list);
     }
 }
+

@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.shuryasnack.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_transaksi_fragment"
+            app:destination="@id/transaksi_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_produk"
@@ -66,4 +70,24 @@
         android:name="com.example.shuryasnack.ui.pendapatan.TahunanFragment"
         android:label="@string/pendapatan_box4"
         tools:layout="@layout/fragment_tahunan" />
+
+    <fragment
+        android:id="@+id/transaksi_fragment"
+        android:name="com.example.shuryasnack.ui.transaksi.TransaksiFragment"
+        android:label="@string/transaksi"
+        tools:layout="@layout/fragment_transaksi" >
+        <action
+            android:id="@+id/action_transaksi_fragment_to_struk_fragment"
+            app:destination="@id/struk_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/struk_fragment"
+        android:name="com.example.shuryasnack.ui.transaksi.StrukFragment"
+        android:label="@string/struk"
+        tools:layout="@layout/fragment_struk" >
+        <action
+            android:id="@+id/action_struk_fragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>

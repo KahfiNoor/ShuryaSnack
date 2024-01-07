@@ -67,13 +67,13 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp">
-                <Button
-                    android:id="@+id/ubahMenu"
-                    android:layout_marginHorizontal="@dimen/_6sdp"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ubah" />
+<!--                <Button-->
+<!--                    android:id="@+id/ubahMenu"-->
+<!--                    android:layout_marginHorizontal="@dimen/_6sdp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Ubah" />-->
                 <Button
                     android:id="@+id/hapusMenu"
                     android:layout_weight="1"

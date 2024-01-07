@@ -33,6 +33,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+//    viewBinding {
+//        enable = true
+//    }
+
 }
 
 dependencies {
@@ -50,6 +54,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui:2.7.6")
     // recycler view
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+//    implementation("com.android.support:recyclerview-v7:28.0.0")
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     // Add the dependency for the Firebase SDK
@@ -66,4 +71,6 @@ dependencies {
     implementation("com.intuit.ssp:ssp-android:1.1.0")
     // card view
     implementation("androidx.cardview:cardview:1.0.0")
+    // fragment
+    implementation("androidx.fragment:fragment:1.6.2")
 }
